@@ -24,7 +24,7 @@ assume_role(){
     fi
 
     # temporary file where to store credentials
-    TEMP_STS_ASSUMED_FILE=$(mktemp -t prowler.sts_assumed-XXXXXX)
+    TEMP_STS_ASSUMED_FILE=$(mktemp ${WORKSPACE}/prowler.sts_assumed-XXXXXX)
 
     #Check if external ID has bee provided if so execute with external ID if not ignore
     if [[ -z $ROLE_EXTERNAL_ID ]]; then
